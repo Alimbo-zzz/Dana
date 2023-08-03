@@ -1,0 +1,59 @@
+.wrap {
+	height: clamp(600px, 100vh, 1000px);
+	background: rgb(129, 70, 255);
+	background: linear-gradient(138deg, rgba(129, 70, 255, 1) 0%, rgba(192, 140, 240, 1) 50%, rgba(107, 36, 197, 1) 100%);
+	padding: 1em;
+	position: relative;
+	overflow: hidden;
+}
+
+
+.container {
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+}
+
+
+.content {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-bottom: 10%;
+	position: relative;
+	gap: 3em;
+
+	@media(max-width: $tablet) {
+		justify-content: flex-end;
+		gap: 2em;
+	}
+
+	* {
+		color: $white;
+		font-weight: bold;
+		font-family: 'Gunny Rewritten', 'Manrope', 'monospace', 'tahoma';
+		text-shadow: 0.1em 0.1em 0.1em rgba($color: #000000, $alpha: 0.3);
+		line-height: 1.1em;
+	}
+
+}
+
+
+.title {
+	font-size: 4.5em;
+}
+
+
+.mainAvatar {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	pointer-events: none;
+	user-select: none;
+	object-position: center center;
+	right: 0;
+	top: 0;
+	mix-blend-mode: overlay;
+}

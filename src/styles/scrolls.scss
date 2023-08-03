@@ -1,0 +1,20 @@
+*::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+
+
+*::-webkit-scrollbar {
+	width: 7px;
+	height: 5px;
+	background-color: rgba($color: $mainDecor, $alpha: 0.3);
+	aspect-ratio: 1/1;
+
+	@media(max-width: $phone) {
+		width: 3px;
+	}
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: rgba($color: $mainDecor, $alpha: 1);
+
+}

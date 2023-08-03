@@ -1,0 +1,15 @@
+* {
+	font-family: 'Manrope', 'monospace', 'tahoma';
+	color: $secondary;
+	scroll-behavior: smooth;
+}
+
+
+body {
+	overflow-x: hidden;
+	background: $mainBG;
+}
+
+.sec {
+	padding: 4em 0;
+}

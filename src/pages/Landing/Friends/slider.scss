@@ -1,0 +1,16 @@
+.cubeSwiper .swiper-pagination.swiper-pagination-fraction.swiper-pagination-horizontal {
+	background: linear-gradient(141deg, #B625FA 0%, #8F37FF 100%);
+	opacity: 0.8;
+	width: 5em;
+	border-radius: 0.5em;
+
+	left: 50%;
+	bottom: 0.5em;
+	transform: translateX(-50%);
+
+	color: $white;
+
+	* {
+		color: $white;
+	}
+}

@@ -1,0 +1,99 @@
+.wish {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	align-items: center;
+	margin: 1em;
+	margin-top: 10em;
+	padding-top: 10em;
+	padding-bottom: 2em;
+	box-shadow:
+		-0.1em -0.1em 1em 0 rgba($color: $mainDecor, $alpha: 1),
+		0.5em 0.5em 0.1em 0 rgba($color: $mainDecor, $alpha: 0.8);
+	border-radius: 0.5em;
+	user-select: none;
+	background: #fff;
+
+	@media(max-width: $phone) {
+		margin-top: 7em;
+		padding-top: 7em;
+	}
+
+	&__img {
+		width: 16em;
+		background: $mainDecor;
+		aspect-ratio: 1/1;
+		object-fit: cover;
+		object-position: center;
+		border-radius: 50%;
+		position: absolute;
+		left: 30%;
+		top: 0;
+		transform: translate(-50%, -50%);
+		box-shadow:
+			-0.1em -0.1em 1em 0 rgba($color: $mainDecor, $alpha: 1.0),
+			0.5em 0.5em 0.1em 0.6em rgba($color: $mainDecor, $alpha: 0.8);
+
+
+		@media(max-width: $phone) {
+			width: 10em;
+			left: 25%;
+		}
+
+	}
+
+	&__name {
+		position: absolute;
+		right: 0.8em;
+		top: 0.8em;
+		color: $mainDecor;
+		font-size: 3em;
+		font-family: 'Gunny Rewritten';
+
+		@media(max-width: $phone) {
+			font-size: 2.5em;
+			top: 0.5em;
+			right: 0.5em;
+		}
+	}
+
+	&__text {
+		padding: 0 1em;
+		margin: 0 1em;
+		padding-bottom: 1em;
+		max-height: 12em;
+		overflow: auto;
+		color: $secondary;
+
+		@media(max-width: $phone) {
+			font-size: 1em;
+			margin-top: 0;
+		}
+
+		p {
+			color: inherit;
+
+			&:first-child {
+				text-indent: 1em;
+			}
+		}
+
+
+		&::-webkit-scrollbar {
+			width: 4px;
+			height: 2px;
+			background-color: rgba($color: $mainDecor, $alpha: 0.2);
+			aspect-ratio: 1/1;
+
+			@media(max-width: $phone) {
+				width: 3px;
+			}
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background-color: rgba($color: $mainDecor, $alpha: 1);
+
+		}
+	}
+}

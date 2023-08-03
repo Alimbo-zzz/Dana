@@ -1,0 +1,56 @@
+.nav {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1em;
+
+	@media(max-width: $phone) {
+		gap: 0;
+		justify-content: space-between;
+	}
+
+
+
+	&__link {
+		font-size: 1.4em;
+		padding: 0.3em 1.2em;
+		position: relative;
+		display: block;
+		cursor: pointer;
+		transition: 0.3s;
+		white-space: nowrap;
+		color: $white;
+		font-weight: 400;
+		font-weight: bold;
+		text-shadow: 0.1em 0.1em 0.1em rgba($color: #000000, $alpha: 0.3);
+
+		@media(max-width: $phone) {
+			padding: 0.3em 0.5em;
+			font-size: 1.2em;
+		}
+
+
+		&:hover {
+
+			&::before {
+				opacity: 1;
+				transform: translateX(-50%) scaleX(1);
+			}
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 50%;
+			bottom: 0;
+			transform: translateX(-50%) scaleX(0);
+			width: calc(100% - 2em);
+			height: 0.08em;
+			transition: inherit;
+			background: $white;
+			opacity: 0;
+		}
+
+
+	}
+}

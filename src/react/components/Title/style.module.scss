@@ -1,0 +1,40 @@
+.title {
+	position: relative;
+	overflow: hidden;
+
+	@media(max-width: $tablet) {
+		font-size: 2em;
+
+		.title__decor {
+			max-width: 200px;
+			object-fit: contain;
+			top: 60%;
+		}
+	}
+
+	* {
+		color: $white;
+	}
+
+	&__decor {
+		position: absolute;
+		height: 300%;
+		pointer-events: none;
+		user-select: none;
+		z-index: 10;
+		right: 0;
+		pointer-events: none;
+		user-select: none;
+		top: 80%;
+		transform: translateY(-50%);
+		mix-blend-mode: screen;
+	}
+
+	background: linear-gradient(141deg, #B625FA 0%, #8F37FF 100%);
+	padding: 0.5em 0;
+	font-weight: 800;
+	margin-bottom: 1em;
+	font-style: italic;
+	letter-spacing: 0.05em;
+	text-shadow: 0.08em 0.07em 0 rgba($color: #222, $alpha: 0.5);
+}

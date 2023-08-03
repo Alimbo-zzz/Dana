@@ -1,0 +1,27 @@
+.gallery {
+	img {
+		object-fit: cover;
+		transform: scale(0.98);
+		// box-shadow: 0.1em 0.1em 0.5em 0em rgba($color: $mainDecor, $alpha: 1.0);
+		border-radius: 0.5em;
+	}
+}
+
+
+.slide {
+	width: 100%;
+	aspect-ratio: 3/2;
+
+	&__img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		user-select: none;
+		pointer-events: none;
+	}
+}
+
+
+.sliderCont {
+	padding-top: 3em;
+}

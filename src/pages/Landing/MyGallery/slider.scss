@@ -1,0 +1,30 @@
+.swiper-pagination-bullet {
+	background: $mainDecor;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+	bottom: 0;
+}
+
+.myGallery .swiper-slide {
+	transition: 0.3s;
+	overflow: hidden;
+}
+
+.myGallery .swiper-slide.swiper-slide-duplicate-active {
+	box-shadow: 0 0 1.5em 0.5em rgba($color: $mainDecor, $alpha: 1.0);
+	// border-radius: 1000px;
+}
+
+.myGallery .swiper-slide.swiper-slide-active {
+	transition: 0.3s;
+	box-shadow: 0 0 1.5em 0.5em rgba($color: $mainDecor, $alpha: 1.0);
+	// border-radius: 1000px;
+}
+
+.myGallery {
+	padding: 4em 0;
+}
