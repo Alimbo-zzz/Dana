@@ -26,8 +26,10 @@
 		pointer-events: none;
 		user-select: none;
 		top: 80%;
-		transform: translateY(-50%);
+		transform: translate(100%, -50%);
 		mix-blend-mode: screen;
+		opacity: 0;
+		transition: 0.3s;
 	}
 
 	background: linear-gradient(141deg, #B625FA 0%, #8F37FF 100%);

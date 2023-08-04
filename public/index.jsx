@@ -5,6 +5,7 @@ import { Landing } from '@/pages';
 
 // modules
 import '@/styles/index.scss';
+import 'aos/dist/aos.css';
 
 
 

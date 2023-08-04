@@ -14,6 +14,7 @@
 	pointer-events: none;
 	z-index: -1;
 
+
 	@media(max-width: $tablet) {
 		width: max(60vw, 20em);
 		transform: rotate(100deg) translate(-10%, -40%);
@@ -30,6 +31,7 @@
 	bottom: 0;
 	pointer-events: none;
 	z-index: -1;
+
 
 	@media(max-width: $tablet) {
 		width: max(50vw, 16em);
@@ -72,11 +74,12 @@
 		position: absolute;
 		left: 30%;
 		top: 0;
-		transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%) scale(0);
 		box-shadow:
 			-0.1em -0.1em 1em 0 rgba($color: $mainDecor, $alpha: 1.0),
 			0.5em 0.5em 0.1em 0.6em rgba($color: $mainDecor, $alpha: 0.8);
 
+		opacity: 0;
 
 		@media(max-width: $phone) {
 			width: 10em;
@@ -92,6 +95,9 @@
 		color: $mainDecor;
 		font-size: 3em;
 		font-family: 'Gunny Rewritten';
+
+		opacity: 0;
+		transform: translateX(100%);
 
 		@media(max-width: $phone) {
 			font-size: 2.5em;

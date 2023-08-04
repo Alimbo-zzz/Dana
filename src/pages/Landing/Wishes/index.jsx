@@ -7,6 +7,8 @@ import { useGallery } from '@hooks';
 const images_wishes = import.meta.globEager('@images/wishes/**/*');
 import { Title } from '@/react/components';
 import './slider.scss';
+import Aos from 'aos';
+import './aos.scss';
 
 import decor_1 from '@images/decor_1.png';
 import decor_3 from '@images/decor_3.png';
@@ -18,6 +20,8 @@ import classNames from 'classnames';
 
 const Wishes = (props) => {
 	const gallery = useGallery(images_wishes);
+
+	useEffect(() => { Aos.init(); }, [])
 
 	const swiperData = {
 		slidesPerView: 1,
@@ -42,16 +46,16 @@ const Wishes = (props) => {
 
 	return (<>
 		<section id='wishes' className={classNames([cls.wrap])}>
-			<img src={decor_1} className={cls.decor_1} />
-			<img src={decor_3} className={cls.decor_3} />
+			<img src={decor_1} data-aos-offset="0" className={classNames([cls.decor_1, 'wish-decor_1'])} />
+			<img src={decor_3} data-aos-offset="0" className={classNames([cls.decor_3, 'wish-decor_3'])} />
 
 			<Title>Пожелания</Title>
 			<div className="container">
 				<Swiper {...swiperData}>
 					{slides.map(el => <SwiperSlide key={el.id}>
 						<div className={cls.wish}>
-							<img src={gallery.obj[el.img]} className={cls.wish__img} />
-							<h4 className={cls.wish__name}>{el.name}</h4>
+							<img src={gallery.obj[el.img]} data-aos data-aos-offset="200" className={classNames([cls.wish__img, 'wish-avatar'])} />
+							<h4 className={classNames([cls.wish__name, 'wish-name'])} data-aos data-aos-offset="100">{el.name}</h4>
 							<div className={cls.wish__text}>
 								{el.review.map((text, i) => <p key={i}>{text}</p>)}
 							</div>
