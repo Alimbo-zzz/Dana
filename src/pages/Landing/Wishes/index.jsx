@@ -6,6 +6,15 @@ import slides from './slides';
 import { useGallery } from '@hooks';
 const images_wishes = import.meta.globEager('@images/wishes/**/*');
 import { Title } from '@/react/components';
+import './slider.scss';
+
+import decor_1 from '@images/decor_1.png';
+import decor_3 from '@images/decor_3.png';
+
+
+import { Pagination, Autoplay } from 'swiper';
+import 'swiper/css/pagination';
+import classNames from 'classnames';
 
 const Wishes = (props) => {
 	const gallery = useGallery(images_wishes);
@@ -14,16 +23,27 @@ const Wishes = (props) => {
 		slidesPerView: 1,
 		slidesPerGroup: 1,
 		spaceBetween: 30,
+		pagination: true,
+		grabCursor: true,
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: true,
+		},
+		modules: [Pagination, Autoplay],
 		breakpoints: {
 			1024: {
 				slidesPerView: 2,
 				slidesPerGroup: 2,
+				pagination: false,
 			}
-		}
+		},
+		className: "WishSlider"
 	}
 
 	return (<>
-		<section id='wishes' className='sec'>
+		<section id='wishes' className={classNames([cls.wrap])}>
+			<img src={decor_1} className={cls.decor_1} />
+			<img src={decor_3} className={cls.decor_3} />
 
 			<Title>Пожелания</Title>
 			<div className="container">

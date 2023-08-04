@@ -1,3 +1,45 @@
+.wrap {
+	position: relative;
+	overflow: hidden;
+	padding-bottom: 8em;
+}
+
+.decor_1 {
+	position: absolute;
+	opacity: 1;
+	width: 30vw;
+	right: 0;
+	top: 30%;
+	transform: rotate(90deg) translateY(-30%);
+	pointer-events: none;
+	z-index: -1;
+
+	@media(max-width: $tablet) {
+		width: max(60vw, 20em);
+		transform: rotate(100deg) translate(-10%, -40%);
+		top: 0%;
+	}
+}
+
+
+.decor_3 {
+	position: absolute;
+	opacity: 1;
+	width: 30vw;
+	left: 0;
+	bottom: 0;
+	pointer-events: none;
+	z-index: -1;
+
+	@media(max-width: $tablet) {
+		width: max(50vw, 16em);
+	}
+}
+
+
+
+
+
 .wish {
 	position: relative;
 	display: flex;
@@ -65,6 +107,7 @@
 		max-height: 12em;
 		overflow: auto;
 		color: $secondary;
+		overscroll-behavior-y: contain;
 
 		@media(max-width: $phone) {
 			font-size: 1em;

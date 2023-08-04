@@ -1,3 +1,43 @@
+.wrap {
+	padding-bottom: 8em;
+	position: relative;
+}
+
+.decor_2 {
+	position: absolute;
+	right: 0;
+	bottom: -1em;
+	width: 70%;
+	transform: rotate(60deg);
+
+	pointer-events: none;
+	z-index: -1;
+}
+
+.blur_1,
+.blur_2 {
+	width: 50%;
+	aspect-ratio: 1/1;
+	border-radius: 50%;
+	position: absolute;
+	z-index: -1;
+	transform: translateX(-50%);
+}
+
+.blur_1 {
+	left: 0;
+	bottom: 0;
+}
+
+.blur_2 {
+	left: 0;
+	top: 30%;
+}
+
+
+
+
+
 .gallery {
 	img {
 		object-fit: cover;

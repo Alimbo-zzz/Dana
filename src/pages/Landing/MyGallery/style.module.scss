@@ -1,3 +1,41 @@
+.wrap {
+	position: relative;
+	padding-bottom: 8em;
+	overflow: hidden;
+}
+
+.decor_1 {
+	position: absolute;
+	width: 40vw;
+	left: 0;
+	top: 0;
+	transform: translateX(-25%);
+	pointer-events: none;
+	z-index: -1;
+
+	@media(max-width: $phone) {
+		width: max(90vw, 25em);
+	}
+}
+
+
+.decor_2 {
+	position: absolute;
+	width: 40vw;
+	right: 0;
+	bottom: 0;
+	transform: translate(35%, 25%) rotate(35deg);
+	pointer-events: none;
+	z-index: -1;
+
+	@media(max-width: $phone) {
+		width: max(90vw, 25em);
+	}
+}
+
+
+
+
 .slide {
 	aspect-ratio: 2/3;
 	background: $mainDecor;

@@ -5,6 +5,8 @@ import { Title } from '@/react/components';
 import Gallery from "react-photo-gallery";
 const images_friends = import.meta.globEager('@images/friends/**/*');
 import { useMediaQuery } from 'react-responsive';
+import decor_2 from '@images/decor_2.png';
+
 
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -71,12 +73,20 @@ const Friends = (props) => {
 		if (gallery.length && galleryRef.current) {
 			const wrap = galleryRef.current;
 			const images = wrap.querySelectorAll('img');
+
+			images.forEach(img => {
+			})
+
 		}
 	}, [gallery])
 
 
 	return (<>
-		<section id='friends' className='sec'>
+		<section id='friends' className={cls.wrap}>
+
+			<img src={decor_2} className={cls.decor_2} />
+			<div className={classNames(['blur', cls.blur_1])} />
+			<div className={classNames(['blur', cls.blur_2])} />
 
 			<Title>Не забывай про своих малышей</Title>
 

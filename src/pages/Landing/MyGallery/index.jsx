@@ -13,6 +13,11 @@ import { useGallery } from '@hooks';
 const images_gallery = import.meta.globEager('@images/myGallery/**/*');
 
 
+import decor_1 from '@images/decor_1.png';
+import decor_2 from '@images/decor_2.png';
+import decor_3 from '@images/decor_3.png';
+
+
 const MyGallery = (props) => {
 	const gallery = useGallery(images_gallery);
 
@@ -63,7 +68,9 @@ const MyGallery = (props) => {
 
 
 	return (<>
-		<section id='myGallery'>
+		<section id='myGallery' className={cls.wrap}>
+			<img src={decor_1} className={cls.decor_1} />
+			<img src={decor_2} className={cls.decor_2} />
 
 			<Title>Альбом</Title>
 

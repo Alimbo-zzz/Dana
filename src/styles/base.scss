@@ -13,3 +13,11 @@ body {
 .sec {
 	padding: 4em 0;
 }
+
+
+.blur {
+	pointer-events: none;
+	user-select: none;
+	background: linear-gradient(141deg, #B625FA 0%, #8F37FF 100%);
+	filter: blur(10em);
+}

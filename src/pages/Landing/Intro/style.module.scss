@@ -27,6 +27,8 @@
 	@media(max-width: $tablet) {
 		justify-content: flex-end;
 		gap: 2em;
+		padding-bottom: 8em;
+		font-size: 0.8em;
 	}
 
 	* {
@@ -42,6 +44,10 @@
 
 .title {
 	font-size: 4.5em;
+}
+
+.subTitle {
+	font-size: 2.8em;
 }
 
 

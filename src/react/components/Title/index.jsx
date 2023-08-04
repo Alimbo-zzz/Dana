@@ -6,9 +6,11 @@ import title_decor from '@images/flower_3.png';
 const Title = ({ children }) => {
 
 	return (<>
-		<h2 className={cls.title}>
+		<h2 className={cls.title} >
 			<div className="container">
-				{children}
+				<div>
+					{children}
+				</div>
 				<img src={title_decor} className={cls.title__decor} />
 			</div>
 		</h2>

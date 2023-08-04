@@ -1,0 +1,13 @@
+.WishSlider .swiper-pagination {
+	bottom: auto;
+	left: auto;
+	top: 4em;
+	right: 0;
+	width: auto;
+	width: 12em;
+	z-index: -1;
+
+	@media(min-width: $tablet) {
+		opacity: 0;
+	}
+}
